@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ImAppTheme" parent="@android:style/Theme.Holo.Light"/>
+
+    <style name="ImTheme.App" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowSoftInputMode">adjustUnspecified|stateHidden</item>
+        <!--<item warehouseName="mp_colorAccent">@color/mp_colorAccent</item>-->
+        <item name="selectableItemBackground">@drawable/abc_item_background_holo_light</item>
+        <item name="android:selectableItemBackground">@drawable/abc_item_background_holo_light
+        </item>
+
+        <item name="popupTheme">@style/Widget.AppCompat.Light.PopupMenu.Overflow</item>
+        <item name="textAppearanceLargePopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large
+        </item>
+        <item name="android:textAppearanceLargePopupMenu">
+            @style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large
+        </item>
+
+        <!--<item warehouseName="android:buttonStyle">@style/buttonStyle</item>        -->
+        <!--<item warehouseName="buttonStyle">@style/buttonStyle</item>
+        <item warehouseName="android:listViewStyle">@style/ListViewStyle</item>-->
+    </style>
+
+
+    <style name="SuggestionHighlight">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/suggestion_highlight_text</item>
+    </style>
+
+    <style name="TextAppearance_Dark">
+        <item name="android:textColor">@color/im_text_color_light</item>
+    </style>
+    <style name="TextAppearance_Light">
+        <item name="android:textColor">@color/im_text_color_dark</item>
+    </style>
+
+    <style name="Button_Colored" parent="android:Widget.Holo.Light.Button">
+        <item name="android:background">@drawable/button_enable</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="Button_Borderless">
+        <item name="android:background">@drawable/im_item_background</item>
+    </style>
+
+    <style name="ReadTheme_TextAppearance">
+        <item name="android:textColor">@color/im_text_color_dark</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="ReadTheme_TextAppearance.Large">
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="ReadTheme_TextAppearance.Small">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="ReadTheme_Dark_TextAppearance">
+        <item name="android:textColor">@color/im_text_color_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="ReadTheme_Dark_TextAppearance.Large">
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="ReadTheme_Dark_TextAppearance.Small">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="file_down_load_progress" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:maxHeight">10dip</item>
+        <item name="android:minHeight">8dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/bg_progressbar_shape_mini</item>
+    </style>
+</resources>

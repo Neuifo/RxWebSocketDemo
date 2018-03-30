@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#2196F3</color>
+    <color name="primaryDarker">#1976D2</color>
+    <color name="primaryDark">#1E88E5</color>
+
+    <color name="holo_green_dark">#4CAF50</color>
+    <color name="holo_green_darker">#43A047</color>
+    <color name="holo_green_darkest">#388E3C</color>
+
+    <color name="im_grey_text_bg">#F4F4F4</color>
+
+    <color name="holo_orange_dark">#F57C00</color>
+    <color name="notification_ic_background">#0a242e</color>
+    <color name="notification_ic_small_background">#a3a3a3</color>
+    <color name="notification_btn_text_color">#eee</color>
+    <color name="notification_background">#000000</color>
+    <color name="notification_background_light">#FFFFFF</color>
+    <color name="notification_btn_text_color_light">#000</color>
+    <color name="shadow_dark">#666</color>
+
+    <color name="suggestion_highlight_text">#177bbd</color>
+    <color name="button_press_highlight">#dedede</color>
+
+    <color name="notification_icon_color">#878787</color>
+
+    <color name="im_text_color_dark">#000000</color>
+    <color name="im_text_color_light">#FFFFFF</color>
+    <color name="im_black_text_333333">#333333</color>
+    <color name="im_black_text_666666">#666666</color>
+    <color name="im_grey_text_999999">#999999</color>
+    <color name="error_highlight_text">#ffcc0000</color>
+    <color name="im_grey_text_A3ADB4">#A3ADB4</color>
+    <color name="im_black_text_626262">#626262</color>
+    <color name="im_green_text_00B9B0">#00B9B0</color>
+
+    <color name="im_red_FB151E">#FB151E</color>
+    <color name="im_red_FF6B6B">#FF6B6B</color>
+    <color name="im_green_text_7ED321">#7ED321</color>
+
+    <color name="im_grey_bg_D9D9D9">#d9d9d9</color>
+    <color name="im_grey_bg_F8F8F8">#F8F8F8</color>
+    <color name="im_grey_bg_E6E6E6">#E6E6E6</color>
+    <color name="im_grey_bg_F5F5F5">#F5F5F5</color>
+    <color name="im_grey_text_BEC9D1">#BEC9D1</color>
+</resources>

@@ -1,0 +1,62 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.neuifo.appkit">
+
+    <application>
+
+        <service
+                android:name=".notification.NotificationListenerService"
+                android:label="@string/app_name"
+                android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        >
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+
+
+        <service
+                android:name=".notification.NotificationListenerAccessibilityService"
+                android:enabled="true"
+                android:exported="true"
+                android:label="@string/app_name"
+                android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        >
+            <meta-data
+                    android:name="android.accessibilityservice"
+                    android:resource="@xml/accessibility_service_config"
+            />
+
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+        </service>
+
+
+        <receiver
+                android:name=".notification.admin.AdminReceiver"
+                android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                    android:name="android.app.device_admin"
+                    android:resource="@xml/device_admin_config"/>
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+                android:name=".notification.KeyguardRelock"
+                android:exported="false"></service>
+
+        <service
+                android:name=".notification.OverlayService"
+                android:enabled="true"
+                android:exported="false"></service>
+        <service
+                android:name=".notification.OverlayServiceCommon"
+                android:enabled="true"
+                android:exported="false"></service>
+
+    </application>
+
+</manifest>

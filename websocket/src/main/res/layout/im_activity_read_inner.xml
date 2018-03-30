@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<!--suppress AndroidMissingOnClickHandler -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/im_linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/status_bar_filler"
+    android:layout_centerHorizontal="true"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/card_white"
+    android:onClick="onPopupClick"
+    android:orientation="vertical"
+    >
+
+  <FrameLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="@dimen/notification_content_padding"
+        android:layout_marginRight="@dimen/notification_content_padding"
+        android:layout_marginTop="@dimen/notification_content_padding"
+        android:baselineAligned="false"
+        android:onClick="onPopupClick"
+        android:orientation="horizontal"
+        >
+
+      <FrameLayout
+          android:layout_width="@dimen/notification_ic_container_size"
+          android:layout_height="@dimen/notification_ic_container_size"
+          >
+
+        <ImageView
+            android:id="@+id/im_notification_icon"
+            android:layout_width="@dimen/notification_ic_size"
+            android:layout_height="@dimen/notification_ic_size"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_dismiss_white"
+            />
+
+        <ImageView
+            android:id="@+id/im_notification_icon_small"
+            android:layout_width="@dimen/notification_ic_small_size"
+            android:layout_height="@dimen/notification_ic_small_size"
+            android:layout_gravity="right|bottom"
+            android:background="@drawable/im_circle_grey"
+            android:padding="2dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_stat_headsup"
+            />
+      </FrameLayout>
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:paddingEnd="@dimen/notification_texts_padding_right"
+          android:paddingLeft="@dimen/notification_texts_padding_left"
+          android:paddingRight="@dimen/notification_texts_padding_right"
+          android:paddingStart="@dimen/notification_texts_padding_left"
+          >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal"
+            >
+
+          <TextView
+              android:id="@+id/im_notification_title"
+              style="@style/ReadTheme_TextAppearance"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_gravity="left"
+              android:layout_weight="1"
+              android:ellipsize="marquee"
+              android:focusable="true"
+              android:singleLine="true"
+              android:text="Simen.codes"
+              android:textSize="@dimen/text_size_notification_title"
+              />
+
+          <TextView
+              android:id="@+id/im_timeView"
+              style="@style/ReadTheme_TextAppearance.Small"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="bottom"
+              android:text="13:20"
+              android:textColor="@android:color/tertiary_text_light"
+              android:textSize="@dimen/text_size_notification_text"
+              android:visibility="gone"
+              />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/im_notification_subtitle"
+            style="@style/ReadTheme_TextAppearance.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:text="Hey!"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="@dimen/text_size_notification_text"
+            />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/im_notification_dismiss"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="right"
+        android:clickable="true"
+        android:contentDescription="@string/reader_btn_dismiss"
+        android:longClickable="true"
+        android:minWidth="0dp"
+        android:onClick="doStop"
+        android:paddingTop="-10dp"
+        android:singleLine="true"
+        android:src="@drawable/ic_dismiss"
+        android:textColor="@color/notification_btn_text_color_light"
+        android:visibility="visible"
+        />
+
+  </FrameLayout>
+
+  <LinearLayout
+      android:id="@+id/im_button_container"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical"
+      android:padding="0dp"
+      >
+
+    <View
+        android:id="@+id/im_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/padding_action_buttons_left"
+        android:layout_marginStart="@dimen/padding_action_buttons_left"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:background="#33333333"
+        />
+
+    <LinearLayout
+        android:id="@+id/action_buttons"
+        style="@style/TextAppearance_Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/padding_action_buttons_right"
+        android:paddingLeft="@dimen/padding_action_buttons_left"
+        android:paddingRight="@dimen/padding_action_buttons_right"
+        android:paddingStart="@dimen/padding_action_buttons_left"
+        android:theme="@style/ImAppTheme"
+        >
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_marginTop="@dimen/notification_content_padding"
+      android:orientation="vertical"
+      />
+
+</LinearLayout>
