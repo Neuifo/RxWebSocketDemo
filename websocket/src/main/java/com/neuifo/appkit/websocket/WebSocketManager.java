@@ -187,7 +187,7 @@ public class WebSocketManager {
     private boolean mConnecting;
     private Socket mSocket;
     private ReconnectionTask mReconnectionTask;
-    private Gson mGson;
+    //private Gson mGson;
 
     /**
      * 注:target是所有消息的最基本数据结构
@@ -268,7 +268,7 @@ public class WebSocketManager {
                     }
                 }).create();
 
-        mGson = gson;
+        //mGson = gson;
 
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         builder.connectTimeout(6000, TimeUnit.SECONDS);

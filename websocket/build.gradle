@@ -58,9 +58,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    api "com.android.support:appcompat-v7:$appcompact_version"
+    api "com.android.support:design:$appcompact_version"
     testImplementation 'junit:junit:4.12'
-    implementation 'com.android.support:design:26.1.0'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
@@ -83,7 +83,7 @@ dependencies {
 
     compile "com.google.protobuf:protobuf-java:3.2.0"
 
-    compile 'com.github.w446108264:XhsEmoticonsKeyboard:2.0.4'
+    //compile 'com.github.w446108264:XhsEmoticonsKeyboard:2.0.4'
 
     compile group: 'com.google.protobuf', name: 'protobuf-java-util', version: '3.2.0'
     compile "javax.annotation:javax.annotation-api:1.2"
@@ -95,7 +95,7 @@ dependencies {
 
     compile 'com.liulishuo.filedownloader:library:1.6.3'
 
-    compile 'com.afollestad.material-dialogs:core:+'
+    api 'com.afollestad.material-dialogs:core:0.9.6.0'
 
     //compile 'com.github.markzhai:blockcanary-android:1.5.0'
 
@@ -105,8 +105,4 @@ dependencies {
         force = true
     }
 
-    compile('com.qiniu:qiniu-android-sdk:7.3.+@jar') {
-        //exclude group: 'okhttp3+', module: 'okhttp3+'
-    }
-    compile 'com.qiniu:happy-dns:0.2.13'
 }
