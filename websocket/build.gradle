@@ -64,36 +64,39 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
-    compile "io.reactivex:rxjava:1.2.3"
-    compile "io.reactivex:rxandroid:1.2.1"
-    compile "com.squareup.retrofit2:retrofit:$retrofit_version"
-    compile "com.squareup.retrofit2:adapter-rxjava:$retrofit_version"
-    compile "com.squareup.retrofit2:converter-scalars:$retrofit_version"
-    compile "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    api "io.reactivex:rxjava:1.2.3"
+    api "io.reactivex:rxandroid:1.2.1"
+    api "com.squareup.retrofit2:retrofit:$retrofit_version"
+    api "com.squareup.retrofit2:adapter-rxjava:$retrofit_version"
+    api "com.squareup.retrofit2:converter-scalars:$retrofit_version"
+    api "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
-    compile("io.grpc:grpc-okhttp:$grpc_version") {
+    api("io.grpc:grpc-okhttp:$grpc_version") {
         //exclude group: 'com.squareup.okhttp'
     }
 
-    compile "io.grpc:grpc-protobuf-lite:$grpc_version"
+    api "io.grpc:grpc-protobuf-lite:$grpc_version"
 
     //compile 'io.grpc:grpc-protobuf-nano:0.13.2'
 
-    compile "io.grpc:grpc-stub:$grpc_version"
+    api "io.grpc:grpc-stub:$grpc_version"
 
-    compile "com.google.protobuf:protobuf-java:3.2.0"
+    api "com.google.protobuf:protobuf-java:3.2.0"
 
     //compile 'com.github.w446108264:XhsEmoticonsKeyboard:2.0.4'
 
-    compile group: 'com.google.protobuf', name: 'protobuf-java-util', version: '3.2.0'
-    compile "javax.annotation:javax.annotation-api:1.2"
+    api('com.google.protobuf.nano:protobuf-javanano:3.1.0')
+    api("com.google.protobuf:protobuf-java-util:3.2.0") {
+        exclude group: 'com.google.guava'
+    }
+    api "javax.annotation:javax.annotation-api:1.2"
 
-    compile 'com.google.code.gson:gson:2.6.2'
+    api 'com.google.code.gson:gson:2.6.2'
 
-    compile 'jp.wasabeef:glide-transformations:2.0.1'
-    compile 'com.nineoldandroids:library:2.4.0'
+    api 'jp.wasabeef:glide-transformations:2.0.1'
+    api 'com.nineoldandroids:library:2.4.0'
 
-    compile 'com.liulishuo.filedownloader:library:1.6.3'
+    //compile 'com.liulishuo.filedownloader:library:1.6.3'
 
     api 'com.afollestad.material-dialogs:core:0.9.6.0'
 
@@ -101,7 +104,7 @@ dependencies {
 
     //compile 'com.github.chrisbanes:PhotoView:+'
 
-    compile ('com.squareup.okhttp3:okhttp-ws:3.3.0'){
+    api('com.squareup.okhttp3:okhttp-ws:3.3.0') {
         force = true
     }
 
